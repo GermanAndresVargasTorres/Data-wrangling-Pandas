@@ -7,8 +7,18 @@ Luego, realiza una serie de transformaciones y cálculos para crear un formato e
 a una base de datos en SQL y finalmente realiza un análisis de distribución de ventas por cadena, línea de producto 
 y punto de venta.
 
+Se requiere primero instalar las siguientes librerías mediante pip. Esto se puede hacer mediante el comando
+"pip install nombre_libreria" en el terminal o símbolo del sistema.
+
+- pandas
+- sqlalchemy
+- openpyxl
+- pyodbc
+
+Para ejecutar el script con Python IDLE, navegar a la carpeta principal y abrir y ejecutar el archivo, o 
+ingresar el comando que se muestra a continuación en el Shell:
+
 Ejemplo:
->>> Abrir y ejecutar el archivo desde Python IDLE o ingresar en el shell:
 >>> exec(open('Cargar_ventas_a_SQL.py').read())
 >>> print(df_ventas)
            TIPO TIPO2  CANAL   CADENA  ...      FECHA    MES CORE STORE PROMOTER
