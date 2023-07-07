@@ -115,7 +115,6 @@ df_ventas = df_ventas.reindex(columns = ['TIPO', 'TIPO2', 'CANAL', 'CADENA', 'SU
  	'CATEGORIA', 'SUBCATEGORIA', 'LINEA', 'SUBLINEA', 'UNIDADES', 'VALOR TOTAL', 
  	'REGIONAL', 'CIUDAD', 'NUMERO SEMANA', 'FECHA', 'MES', 'CORE STORE', 'PROMOTER'])
 
-
 # Crear la cadena de conexión con Windows Authentication
 cadena_conexion_sql = f'mssql+pyodbc://{servidor_sql}/{db_sql}?trusted_connection=yes&driver=ODBC+Driver+17+for+SQL+Server'
 
