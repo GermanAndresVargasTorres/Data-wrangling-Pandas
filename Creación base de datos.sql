@@ -1,10 +1,10 @@
 -- Crear base de datos
-CREATE DATABASE PruebaLG;
+CREATE DATABASE PruebaDB;
 
 -- Crear tabla para las ventas
 -- (Tamaño de los campos de caracteres se decidió inspeccionando la longitud de 
 -- la información registrada en dichas columnas en Python)
-USE PruebaLG;
+USE PruebaDB;
 CREATE TABLE Ventas(
 	VentasID INT IDENTITY(1,1) NOT NULL,
 	Tipo VARCHAR(10),
