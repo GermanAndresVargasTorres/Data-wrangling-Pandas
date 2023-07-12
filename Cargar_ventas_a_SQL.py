@@ -125,6 +125,7 @@ df_ventas = df_ventas.reindex(columns = ['TIPO', 'TIPO2', 'CANAL', 'CADENA', 'SU
  	'CATEGORIA', 'SUBCATEGORIA', 'LINEA', 'SUBLINEA', 'UNIDADES', 'VALOR TOTAL', 
  	'REGIONAL', 'CIUDAD', 'NUMERO SEMANA', 'FECHA', 'MES', 'CORE STORE', 'PROMOTER'])
 
+'''
 # Crear la cadena de conexión con Windows Authentication
 cadena_conexion_sql = f'mssql+pyodbc://{servidor_sql}/{db_sql}?trusted_connection=yes&driver=ODBC+Driver+17+for+SQL+Server'
 
@@ -133,7 +134,7 @@ motor_sql = create_engine(cadena_conexion_sql)
 
 # Exportar el dataframe a la tabla de ventas en SQL
 df_ventas.to_sql(tabla_sql_ventas, motor_sql, if_exists = 'replace', index = False)
-
+'''
 
 # PASO 2 - CALCULO DE DISTRIBUCION DE VENTAS POR CADENA, LINEA DE PRODUCTO Y PUNTO DE VENTA
 
@@ -153,7 +154,7 @@ porcentajes_por_sede = (totales_por_sede / subconjuntos_linea)
 
 
 # PROXIMA FASE - CREACION DEL FORMATO DE TARGET
-'''
+
 # Cargar el target a un dataframe
 df_target = pd.read_excel(carpeta_target + archivo_target)
 
@@ -165,4 +166,3 @@ df_target = df_target.set_index(['CADENA', 'LINEA'])
 
 # Hallar el target de unidades a vender en cada sede mensualmente
 #monthly_target_units = df_target.mul(porcentajes_por_sede, level=['CADENA', 'LINEA'])
-'''
